@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import React, { useCallback, useEffect, useState } from 'react';
 import LoginScreen from './App/Screen/LoginScreen/LoginScreen';
+// import { SignedIn, SignedOut } from '@clerk/clerk-expo';
 import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-expo';
 import * as SecureStore from "expo-secure-store";
 import { NavigationContainer, TabRouter } from '@react-navigation/native';
@@ -77,7 +78,7 @@ export default function App() {
   return (
     <ClerkProvider
      tokenCache={tokenCache}
-     publishableKey={'pk_test_YWNjdXJhdGUta2l3aS03Ny5jbGVyay5hY2NvdW50cy5kZXYk'}
+     publishableKey={'pk_test_bW9yZS1tb2xlLTQ4LmNsZXJrLmFjY291bnRzLmRldiQ'}
     
     >
       <UserLocationContext.Provider
@@ -109,3 +110,5 @@ const styles = StyleSheet.create({
     padding: 25,
   },
 });
+
+registerRootComponent(MainApp);
